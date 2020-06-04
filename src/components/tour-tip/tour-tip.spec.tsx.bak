@@ -1,0 +1,18 @@
+import { newSpecPage } from '@stencil/core/testing';
+import { TourTip } from './tour-tip';
+
+describe('tour-tip', () => {
+  it('renders', async () => {
+    const page = await newSpecPage({
+      components: [TourTip],
+      html: `<tour-tip></tour-tip>`,
+    });
+    expect(page.root).toEqualHtml(`
+      <tour-tip>
+        <mock:shadow-root>
+          <slot></slot>
+        </mock:shadow-root>
+      </tour-tip>
+    `);
+  });
+});

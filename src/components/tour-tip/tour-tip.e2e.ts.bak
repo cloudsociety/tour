@@ -1,0 +1,11 @@
+import { newE2EPage } from '@stencil/core/testing';
+
+describe('tour-tip', () => {
+  it('renders', async () => {
+    const page = await newE2EPage();
+    await page.setContent('<tour-tip></tour-tip>');
+
+    const element = await page.find('tour-tip');
+    expect(element).toHaveClass('hydrated');
+  });
+});

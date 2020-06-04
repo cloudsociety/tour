@@ -1,0 +1,14 @@
+:host {
+  position: relative;
+  display: inline-block;
+}
+
+[hidden] {
+  display: none;
+}
+
+:host div {
+  position: absolute;
+  top: 100%;
+  width: 150px;
+}
